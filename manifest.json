@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-save-from-ai",
+  "name": "Save from AI",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "ClaudeやChatGPTの会話をサイドパネルからVaultに保存する",
+  "author": "User",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}

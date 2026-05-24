@@ -1,0 +1,190 @@
+/* ── Layout ─────────────────────────────────── */
+.sfa-root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 12px;
+    gap: 10px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.sfa-grow {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-height: 0;
+}
+
+/* ── Header ─────────────────────────────────── */
+.sfa-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.sfa-header-title {
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--text-normal);
+}
+
+/* ── Section / label ────────────────────────── */
+.sfa-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sfa-label {
+    font-size: 0.72em;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ── Source toggle ──────────────────────────── */
+.sfa-btn-group {
+    display: flex;
+    gap: 6px;
+}
+
+.sfa-src-btn {
+    flex: 1;
+    padding: 6px 0;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--radius-m);
+    background: var(--background-secondary);
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.88em;
+    font-weight: 500;
+    transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+
+.sfa-src-btn.sfa-active {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: var(--interactive-accent);
+}
+
+.sfa-src-btn:hover:not(.sfa-active) {
+    background: var(--background-modifier-hover);
+    color: var(--text-normal);
+}
+
+/* ── Input / Select ─────────────────────────── */
+.sfa-input,
+.sfa-select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--radius-s);
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 0.88em;
+    box-sizing: border-box;
+    transition: border-color 0.12s;
+}
+
+.sfa-input:focus,
+.sfa-select:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+}
+
+/* ── Textarea ───────────────────────────────── */
+.sfa-textarea {
+    flex: 1;
+    width: 100%;
+    min-height: 120px;
+    padding: 8px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--radius-s);
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 0.83em;
+    font-family: var(--font-monospace);
+    line-height: 1.55;
+    resize: vertical;
+    box-sizing: border-box;
+    transition: border-color 0.12s;
+}
+
+.sfa-textarea:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+}
+
+.sfa-char-count {
+    font-size: 0.72em;
+    color: var(--text-faint);
+    text-align: right;
+}
+
+/* ── Button row ─────────────────────────────── */
+.sfa-btn-row {
+    display: flex;
+    gap: 8px;
+}
+
+.sfa-save-btn {
+    flex: 1;
+    padding: 8px;
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border: none;
+    border-radius: var(--radius-m);
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: opacity 0.12s;
+}
+
+.sfa-save-btn:hover {
+    opacity: 0.82;
+}
+
+.sfa-save-btn:active {
+    opacity: 0.7;
+}
+
+.sfa-clear-btn {
+    padding: 8px 14px;
+    background: var(--background-secondary);
+    color: var(--text-muted);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--radius-m);
+    cursor: pointer;
+    font-size: 0.88em;
+    transition: background 0.12s, color 0.12s;
+}
+
+.sfa-clear-btn:hover {
+    background: var(--background-modifier-hover);
+    color: var(--text-normal);
+}
+
+/* ── Status message ─────────────────────────── */
+.sfa-status {
+    font-size: 0.78em;
+    min-height: 1.6em;
+    padding: 5px 8px;
+    border-radius: var(--radius-s);
+    word-break: break-all;
+}
+
+.sfa-status-success {
+    background: rgba(0, 170, 100, 0.1);
+    color: var(--color-green);
+    border: 1px solid rgba(0, 170, 100, 0.25);
+}
+
+.sfa-status-error {
+    background: rgba(220, 50, 50, 0.1);
+    color: var(--color-red);
+    border: 1px solid rgba(220, 50, 50, 0.25);
+}

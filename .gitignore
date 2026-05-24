@@ -1,0 +1,9 @@
+# Obsidian plugin data (contains API keys — never commit)
+data.json
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.log
